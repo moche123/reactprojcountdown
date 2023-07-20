@@ -48,7 +48,8 @@ const Login = () => {
   })
 
   return (
-    <React.Fragment>
+    <div className="d-flex flex-column gap-2 align-items-center login-content">
+
         {message}
         <h1>Login</h1>
         <form onSubmit={ formik.handleSubmit }>
@@ -58,6 +59,7 @@ const Login = () => {
                     type='email' 
                     id='email'
                     placeholder='User email'  
+                    className="form-control"
                     onInput={ ()=>{
                         setChangeForm(true)
                     } }
@@ -80,6 +82,7 @@ const Login = () => {
                     type='password' 
                     id='password'
                     placeholder='User password'  
+                    className="form-control"
                     onInput={ ()=>{
                         setChangeForm(true)
                     } }
@@ -99,7 +102,7 @@ const Login = () => {
                                     ? 'btn btn-secondary disabled':'btn btn-primary' } />
         </form>
 
-    </React.Fragment>
+    </div>
 
 
   )
